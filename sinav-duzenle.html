@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Öğrenci Dashboard</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+    
+    .page-wrapper {
+    position: inherit;
+    padding: 0 30px;
+    min-height: 568px;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse bg-faded">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="#">Ogrenci Dashboard</a>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="ogrenci.html">Öğrenci</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sinav-yoneticisi.html">Sınav Yöneticisi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="sinavlar.html">Sınavları Görüntüle</a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="page-wrapper">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ol class="breadcrumb" style="margin-top: 25px;">
+                            <li class="breadcrumb-item"><a href="#">Anasayfa</a></li>
+                            <li class="breadcrumb-item">Sınav Yöneticisi</li>
+                            <li class="breadcrumb-item active">Sınav Düzenle</li>
+                        </ol>
+                        <h1 class="page-heading h2">İnternet Programcılığı 1 - Vize</h1>
+                    </div>
+                    
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-12">
+                        <!-- Temel -->
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Temel</h4>
+                            </div>
+                            <div class="card-block">
+                                <form action="#">
+                                    <div class="form-group row">
+                                        <label for="course_title" class="col-sm-3 col-form-label">Sınav Başlığı:</label>
+                                        <div class="col-sm-9 col-md-4">
+                                        <div class="input-group">
+                                            <span class="input-group-addon" id="sizing-addon2">#</span>
+                                            <input type="text" class="form-control" placeholder="Title" aria-describedby="sizing-addon2" value="İnternet Programcılığı 1 - Vize">
+                                        </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group row">
+                                        <label for="time_toggle" class="col-sm-3 col-form-label">Zaman Aralığı</label>
+                                        <div class="col-sm-9">
+                                        <div class="switch">
+                                            <input id="cmn-toggle" class="switch-toggle switch-toggle-round" type="checkbox" checked="">
+                                            <label for="cmn-toggle"></label>
+                                        </div>
+                                        <div class="form-inline">
+                                            <div class="form-group">
+                                            <input type="text" class="form-control text-xs-center" value="4" style="width:50px;">
+                                            </div>
+                                            <div class="form-group">
+                                            <select class="custom-select">
+                                                <option value="hour" selected="">Saat</option>
+                                                <option value="minutes">Minutes</option>
+                                            </select>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- Temel -->
+<br>
+                        <!-- Sorular -->
+
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="pull-left"><h4 class="card-title">Sorular</h4></div>
+                                <div class="pull-right"><a href="#" data-toggle="modal" data-target="#sinavDuzenle" class="pull-rigt btn btn-success">Soru Ekle <i class="fa fa-plus" aria-hidden="true"></i></a></div>
+                            </div>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                    <th>#</th>
+                                    <th>Sınav Adı</th>
+                                    <th>Eylem</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>İnternet Programcılığı 1 - Vize</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#sinavDuzenle" class="pull-rigt btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">1</th>
+                                        <td>İnternet Programcılığı 1 - Vize</td>
+                                        <td><a href="#" data-toggle="modal" data-target="#sinavDuzenle" class="pull-rigt btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                                      
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="modal fade" id="sinavDuzenle" aria-hidden="true" style="display: none;">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header bg-primary">
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                          </button>
+                          <h5 class="modal-title">Soru Ekle/Duzenle</h5>
+                        </div>
+                        <div class="modal-body">
+                          <form action="#">
+                            <div class="form-group row">
+                              <label for="" class="col-form-label col-md-3">Başlık:</label>
+                              <div class="col-md-9">
+                                <input type="text" class="form-control" value="Database Access">  
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-form-label col-md-3">Tip:</label>
+                              <div class="col-md-4">
+                                <select class="custom-control custom-select form-control">
+                                  
+                                  <option value="2">Klasik</option>
+                                  <option value="3">Test</option>
+                                </select>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-form-label col-md-3">Cevaplar:</label>
+                              <div class="col-md-9">
+                                <a href="#" class="btn btn-default"><i class="fa fa-plus" aria-hidden="true"></i> Cevap Ekle</a>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <label for="" class="col-form-label col-md-3">Soru Puanı:</label>
+                              <div class="col-md-4">
+                                <input id="touch-spin-2" data-toggle="touch-spin" data-min="0" data-max="100" data-step="5" type="text" value="50" name="demo2" class="form-control">
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-8 offset-md-3">
+                                <button type="submit" class="btn btn-success">Kaydet</button>
+                              </div>
+                            </div>
+                          </form> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            
+    </div>
+        
+</body>
+</html>
